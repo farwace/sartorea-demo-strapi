@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rubric_criteria",
+  "info": {
+    "singularName": "rubric-criterion",
+    "pluralName": "rubric-criteria",
+    "displayName": "Rubric criterion"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order": {
+      "type": "integer",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "descriptors": {
+      "type": "json"
+    },
+    "descriptorsPending": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

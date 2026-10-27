@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "settings",
+  "info": {
+    "singularName": "programme",
+    "pluralName": "programmes",
+    "displayName": "Programme settings"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "programName": {
+      "type": "string",
+      "default": "Sartorea"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "cohortLabel": {
+      "type": "string"
+    },
+    "cohortStartDate": {
+      "type": "date"
+    },
+    "currentWeek": {
+      "type": "integer",
+      "min": 1,
+      "max": 6,
+      "default": 1
+    },
+    "todayOverride": {
+      "type": "date"
+    },
+    "coachName": {
+      "type": "string"
+    },
+    "disclaimerPsychometric": {
+      "type": "text"
+    },
+    "disclaimerDevelopment": {
+      "type": "text"
+    }
+  }
+}

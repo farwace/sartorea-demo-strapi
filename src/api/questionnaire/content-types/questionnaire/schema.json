@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "questionnaire",
+  "info": {
+    "singularName": "questionnaire",
+    "pluralName": "questionnaires",
+    "displayName": "Week 1 questionnaire"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "likertLabels": {
+      "type": "json"
+    },
+    "partTitles": {
+      "type": "json"
+    },
+    "partInstructions": {
+      "type": "json"
+    },
+    "completion": {
+      "type": "text"
+    }
+  }
+}

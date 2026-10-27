@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assessments",
+  "info": {
+    "singularName": "assessment",
+    "pluralName": "assessments",
+    "displayName": "Coach assessment"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "timepoint": {
+      "type": "enumeration",
+      "enum": [
+        "week1",
+        "week6"
+      ],
+      "required": true
+    },
+    "clarity": {
+      "type": "decimal"
+    },
+    "capability": {
+      "type": "decimal"
+    },
+    "presence": {
+      "type": "decimal"
+    },
+    "presentationScore": {
+      "type": "integer",
+      "min": 5,
+      "max": 20
+    },
+    "criteriaScores": {
+      "type": "json"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "assessedAt": {
+      "type": "date"
+    },
+    "participant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::participant.participant",
+      "inversedBy": "assessments"
+    }
+  }
+}

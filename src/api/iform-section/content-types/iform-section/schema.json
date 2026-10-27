@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "iform_sections",
+  "info": {
+    "singularName": "iform-section",
+    "pluralName": "iform-sections",
+    "displayName": "I·FORM section"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "emptyHint": {
+      "type": "text"
+    },
+    "source": {
+      "type": "enumeration",
+      "enum": [
+        "auto",
+        "manual"
+      ],
+      "default": "auto"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ui_strings",
+  "info": {
+    "singularName": "ui-string",
+    "pluralName": "ui-strings",
+    "displayName": "UI String",
+    "description": "Every visible label, button and hint. Edited by the client, not by code."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "group": {
+      "type": "enumeration",
+      "enum": [
+        "nav",
+        "home",
+        "week",
+        "evidence",
+        "identity",
+        "presence",
+        "iform",
+        "coach",
+        "settings",
+        "messages",
+        "support",
+        "auth",
+        "common",
+        "demo"
+      ],
+      "required": true
+    },
+    "value": {
+      "type": "text",
+      "required": true
+    },
+    "hint": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

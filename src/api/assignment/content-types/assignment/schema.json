@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assignments",
+  "info": {
+    "singularName": "assignment",
+    "pluralName": "assignments",
+    "displayName": "Assignment"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "assessment",
+        "reflection",
+        "video",
+        "evidence",
+        "practice",
+        "presentation"
+      ],
+      "required": true
+    },
+    "instructions": {
+      "type": "text"
+    },
+    "criteria": {
+      "type": "text"
+    },
+    "dueInDays": {
+      "type": "integer"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "week": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::week.week",
+      "inversedBy": "assignments"
+    }
+  }
+}

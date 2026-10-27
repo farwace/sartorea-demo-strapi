@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order": {
+      "type": "integer",
+      "required": true
+    },
+    "part": {
+      "type": "enumeration",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "likert",
+        "open",
+        "video"
+      ],
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "helper": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

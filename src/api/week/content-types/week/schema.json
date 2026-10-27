@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "weeks",
+  "info": {
+    "singularName": "week",
+    "pluralName": "weeks",
+    "displayName": "Week"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "min": 1,
+      "max": 6
+    },
+    "stage": {
+      "type": "enumeration",
+      "enum": [
+        "OBSERVE",
+        "IDENTIFY",
+        "FOCUS",
+        "EXPRESS",
+        "PRESENT",
+        "ACT"
+      ],
+      "required": true
+    },
+    "stageDefinition": {
+      "type": "text"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "artifact": {
+      "type": "string"
+    },
+    "opensInDays": {
+      "type": "integer",
+      "default": 0
+    },
+    "contentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "ready",
+        "pending"
+      ],
+      "default": "pending",
+      "required": true
+    },
+    "assignments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::assignment.assignment",
+      "mappedBy": "week"
+    }
+  }
+}

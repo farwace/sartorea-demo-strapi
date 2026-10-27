@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evidence_records",
+  "info": {
+    "singularName": "evidence-record",
+    "pluralName": "evidence-records",
+    "displayName": "Evidence record"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "situation": {
+      "type": "text"
+    },
+    "action": {
+      "type": "text"
+    },
+    "result": {
+      "type": "text"
+    },
+    "competency": {
+      "type": "string"
+    },
+    "supportingEvidence": {
+      "type": "text"
+    },
+    "verification": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "self-reported",
+        "coach-reviewed",
+        "externally-verified"
+      ],
+      "default": "self-reported",
+      "required": true
+    },
+    "coachComment": {
+      "type": "text"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "participant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::participant.participant",
+      "inversedBy": "evidenceRecords"
+    }
+  }
+}
