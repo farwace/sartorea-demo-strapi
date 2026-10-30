@@ -42,7 +42,7 @@ export const QUESTIONNAIRE = {
   ],
   partTitles: {
     A: 'Part A — Professional Identity Clarity',
-    B: 'Part B — Professional Capability & Confidence',
+    B: 'Part B — Professional Confidence',
     C: 'Part C — Professional Image & Presence',
     D: 'Part D — Personal Reflection',
     E: 'Part E — Two-Minute Professional Introduction',
@@ -55,7 +55,7 @@ export const QUESTIONNAIRE = {
     E: 'Introduce yourself as if you were meeting a recruiter or professional contact for the first time.',
   },
   completion:
-    'Thank you for completing your first Sartorea assessment. You have taken the first step toward understanding and expressing your professional identity. Your answers will inform your development activities during the next five weeks.',
+    'Thank you. Your starting-point profile is saved and locked. In Week 6 the same questions return, and the two sets are shown side by side — what changed, not whether you passed.',
 };
 
 export const WEEKS = [
@@ -283,7 +283,7 @@ export const QUESTIONS = [
     text: question.text,
     label: question.label,
     helper: '',
-    required: false,
+    required: true,
   })),
   {
     order: 17,
@@ -335,45 +335,42 @@ export const RUBRIC_CRITERIA = [
   },
 ];
 
+/**
+ * The five blocks of the finished profile, in the order the client asked for:
+ * identity, capabilities, evidence of achievement, professional image, plan.
+ */
 export const IFORM_SECTIONS = [
   {
     order: 1,
-    title: 'Professional Identity Statement',
+    title: 'Professional Identity',
     description: 'Who you are professionally, in your own words, revised as your evidence sharpens.',
-    emptyHint: 'Written after the Identity Discovery tracks in Week 2–3.',
+    emptyHint: 'Written after the Identity Discovery work in Weeks 2–3.',
     source: 'manual',
   },
   {
     order: 2,
-    title: 'Selected evidence',
-    description: 'The records you chose to represent your capabilities.',
-    emptyHint: 'Add your first evidence record to fill this section.',
+    title: 'Professional Capabilities',
+    description: 'What you can do, measured at the start and again at the end of the programme.',
+    emptyHint: 'Appears once the Week 1 baseline is submitted.',
     source: 'auto',
   },
   {
     order: 3,
-    title: 'Assignment results',
-    description: 'Starting point and final measurement, side by side.',
-    emptyHint: 'Appears after Week 6.',
+    title: 'Evidence of Achievement',
+    description: 'The records you chose to prove those capabilities.',
+    emptyHint: 'Add your first evidence record to fill this section.',
     source: 'auto',
   },
   {
     order: 4,
-    title: 'Assessment of change',
-    description: 'What moved between Week 1 and Week 6, in your coach\'s assessment.',
-    emptyHint: 'Appears after the final assessment.',
-    source: 'auto',
-  },
-  {
-    order: 5,
-    title: 'Professional Image Signature',
-    description: 'Visual, behavioural and digital presence — the deliberate choices you made.',
+    title: 'Professional Image',
+    description: 'Visual, behavioural, communication and digital presence — the deliberate choices you made.',
     emptyHint: 'Written in Week 5, in the Maison Marina lab.',
     source: 'manual',
   },
   {
-    order: 6,
-    title: 'Next step plan',
+    order: 5,
+    title: 'Next Step Plan',
     description: 'Three actions for the 30 days after the programme.',
     emptyHint: 'Written in Week 6.',
     source: 'manual',
